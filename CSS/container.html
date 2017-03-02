@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #container {
+            background: lightgreen;
+            padding: 10px;
+        }
+
+        #box1,
+        #box2,
+        #box3 {
+            /*height: 100px;*/
+            background: #ddd;
+            margin: 30px;
+            padding: 20px;
+            border: 10px dashed #0D6EB8;
+        }
+
+        #box1 {
+            float: left;
+            background: transparent; /*transparent 透明的\ [træn'spær\(ə\)nt\;\ trɑːn-\;\ -'speə-]*/
+            border-color: purple;
+        }
+
+        #box2 {
+            border-style: solid;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="box1">box1...</div>
+    <div id="box2">box2...</div>
+    <div id="box3">box3...</div>
+    <div class="clear"></div>
+</div>
+</body>
+</html>

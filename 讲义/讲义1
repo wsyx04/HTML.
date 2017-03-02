@@ -1,0 +1,313 @@
+cd 进入文件夹 cd..返回上一层
+dir 目录
+javac 编译机
+cmd
+main方法
+找不到文件的请况：1文件存在目录错误
+2目录没错，文件名错误
+no class 类名错了
+public 类名和java文件名一致
+set classpath 进入环境变量
+在配置classpath 不加分号
+dir目录
+md创建目录
+rd删除目录
+cd进入指定目录
+cd..退回上一级目录
+cd/退回到根目录
+del删除文件
+exit退出dos命令行
+*代表所有
+class Demo
+{
+	public static void main(String[] args)
+	{
+
+	}
+}
+
+0.1html
+Hyper亢奋 Text文本 Markup标记 Language语言
+超文本标记语言
+
+<h1 style="color:#f00;">Hello,HTML!</h1>
+属性 attribute
+f00红色
+00f蓝色
+0f0绿色
+ff0000红色
+ffffff白色
+000000黑色
+ff00ff紫色
+ffff00黄色
+
+代码颜色
+颜色#RRGGBB
+16777216种颜色  但大致能显示的就1万多种
+R-red红色
+G-green绿色
+B-blue蓝色
+
+0-9 a-f 十六进制
+
+0-9 十进制
+
+0-1 二进制
+
+N  N进制
+
+16777216颜色
+
+static  静态
+
+h1-h6   h系类一共有6级标题数值变大依次变小
+
+<hi>tab table 制表符 H- headline 标题 即时保存</hi>
+
+disabled 禁用
+
+Alt + 1进入
+    Alt + Insert / command + n新建
+    Ctrl + d / Command + d  快速复制一行
+    Ctrl + y / Command + Del 快速删除一行
+    Alt + F2 / option + F2打开浏览器
+    Ctrl + Alt + L / option + command + L  整理格式化
+    Shift + Ctrl(Alt) + up down / Shift + command(option) + up down
+    移动一行
+https://thu.github.io/IDEA
+
+Chapter 4 常用元素
+
+Document type文档类型声明
+
+!doctype document type
+<!DOCTYPE html>
+
+Headings标题
+
+html网页////
+body主题
+head头，标题
+title  标题注释
+base
+meta在head 中定义 只在head 中定义
+<meta> 标签的属性定义了与文档相关联的名称/值对。
+charset
+
+link 链接
+style风格样式
+script脚本
+
+h1~h6 heading 标题
+hr horizontal line水平线 空元素
+
+Paragraphs段落
+
+p paragraph分段
+br break不建议使用，断行
+pre preformatted预先格式化
+
+
+text-indent: 2em 空格
+
+Styles风格
+
+style .attr
+应用在头部（head）的标签在Excel中，Style 对象代表区域的样式说明。
+Text Formatting文本
+
+b bold强调
+em emphasis
+i italic斜体
+small小
+strong加粗
+sub subscript下标
+sup superscript上标
+ins inserted插入
+del deleted
+mark强调加底色
+Quotations引用*
+
+abbr abbreviation缩写
+address地址
+bdo bi-directional override从左到右
+blockquote quotaed section  自动空格
+cite字体倾斜
+q quotation加引号
+
+Computer Code计算机代码
+
+code代码
+kbd keyboard input快捷键
+samp sample output样值输出
+var variable倾斜
+
+Comments注释
+
+<!-- -->注释隐藏
+<!--[if IE 8]><![endif]-->
+
+
+
+id  标志
+
+
+titile标题 描述性 对一些文本描述
+
+
+a anchor锚点  可跳向某一个位置
+
+
+images
+
+img image 图片src source code 源代码
+alt alternate替换
+width 大小
+title  标题
+
+Tables表格   layout布局
+tr table row 行
+th table heading表格标题
+td table data表格内容
+colspan跨列
+rowspan跨行
+
+border 边框
+
+caption表格标题
+
+border设置边况的属性
+
+collapse表格合并
+
+div+css布局方式
+
+
+制作表格作业
+
+Lists  列表 清单
+
+ul li  unordered list
+无序列表
+ol li  ordered list
+有序列表
+dl dt dd  description list / description term / description data
+描述列表
+
+ 浏览器  browser mark
+         网景
+         Chrome谷歌 铬
+         IE
+         Opera欧鹏
+         Safari苹果
+         Firefox火狐
+         Yandex
+
+         baidu
+         qq腾讯
+         uc
+         sougou搜狗
+         360
+
+Iframes
+
+iframe 嵌入网页
+
+Forms  表单******
+
+name属性必须有
+
+form
+action表单提交的位置
+method表单提交的方法
+enctupe
+
+input  输入文本输入框
+size样式长度
+maxlength最大字符长度
+placeholder提示
+password密码
+radio单选按钮
+submit提交
+value价值
+chrckbox多选框
+gender性别
+file文件上传
+hidden隐藏域
+button按钮
+reset重置
+date日期选择
+
+textarea表单输入域 文本输入域
+
+select下拉列表
+option下拉列表项
+hobbise爱好
+
+button可以提交表单
+
+disabled禁用
+checked勾选
+selected勾选用于下拉列表
+multiple多选应用下拉列表
+
+HTML Entities 实体
+
+&copy; - ©版权所有
+&trade; - ™注册商标
+&reg; - ®
+&yen; - ¥
+&nbsp; - none-breaking space不换行的空白
+
+
+Grouping tags
+
+div division 划分 独占一行
+span  划分 以内容为宽度
+
+
+Block Elements and Inline Elements
+
+Block-level Element 块级元素
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+div
+h1 - h6
+p
+form
+Inline Element 行内元素
+An inline element does not start on a new line and only takes up as much width as necessary.
+span
+a
+img
+URL
+
+ background:底色
+ color: #fff;
+
+link  引用对css的引用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

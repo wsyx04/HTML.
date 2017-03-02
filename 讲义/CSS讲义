@@ -1,0 +1,583 @@
+CSS
+
+cascading层叠   style样式  sheets表 层叠样式表
+Cascading Style Sheets 层叠样式表
+Hello,CSS!
+
+Source code
+<!-- index.html -->
+<link href="style.css">
+<h1>Hello,CSS!</h1>
+/* style.css */
+h1 {
+    color: #f00;
+}
+
+link  超引用
+Ctrl + B 跳到CSS
+Ctrl + / 注释
+background背景颜色
+hi块级元素
+
+
+<style>
+@import"引入css文件"
+</style>
+
+与link差不多  有区别
+
+4 个概念
+选择器 selector h1
+样式声明 declaration color: #f00;一条样式声明
+样式属性 property color
+样式值 value #f00
+
+
+
+CSS 的 3 种使用方式
+
+优先级： 内联 > 内部 = 外部
+
+内部和外部发生冲突时；下部会覆盖上部
+
+
+内联样式 Inline行内  Styles
+Source code
+ <!-- index.html -->
+ <h1 style="color: #f00;">headline...</h1>
+
+
+内部样式 Internal Style Sheet
+Source code
+ <!-- index.html -->
+ <head>
+     <style>
+         h1 {
+             color: #f00;
+         }
+     </style>
+ </head>
+ <body>
+ <h1>headline...</h1>
+ </body>
+
+
+外部样式 External Style Sheet
+Source code
+ /* style.css */
+ h1 {
+     color: #f00;
+ }
+ <!-- index.html -->
+ <head>
+     <link href="style.css">
+ </head>
+ <body>
+ <h1>headline...</h1>
+ </body>
+Ctrl + Shift + Enter 大括号快捷键
+
+
+CSS 选择器
+
+基本选择器
+
+标记(元素/标签)选择器
+decoration装饰
+underline下划线
+solid 固体 实线 chocolate巧克力
+font 字形
+size大小
+family家族
+font-family字体类型
+font-size字体大小
+generic通用
+SimHei 黑体
+SimSun 宋体
+cursive手写体分类吗
+monospace等宽字体分类名
+serif衬线字体分类名 一般用于文章主体
+san-serif非衬线字体
+以元素名做选择器名
+
+class 选择器
+class类
+以 . 开头
+自定义选择器名
+类别选择器只会选择class 标记的   代码
+
+
+id 选择器
+以 # 开头
+自定义选择器名
+
+duplicate重复
+refer
+common sense 常识
+越特殊的优先级越高
+
+class 和 id 的区别
+class 用 . 开头，id 用 # 开头
+class 值在一个页面中可以使用多次，id 只能使用一次
+class 和 id 同时存在并发生样式冲突时，id 优先级高
+class 可以用空格引用多个值，id 不可以
+何时用 class 何时用 id?
+根据需求来
+通用的用class
+特殊的用id
+
+CSS背景
+
+背景色
+
+background-color 背景色 为页面做背景色
+padding 内边距
+transparent透明  为background-color的默认值  若颜色无法显示则显示祖先元素背景
+
+body {background-color: yellow}
+
+背景图像
+
+background-image        为页面做背景图片
+但background-image  不能被继承？？？？
+
+body {background-image:url(/i/eg_bg_04.gif);}
+
+背景重复
+background-repeat
+对背景图像进行平铺
+body{
+background-image:url(/i/eg_bg_04.gif);
+}
+
+    如果需要在页面上对背景图像进行平铺，可以使用 background-repeat 属性。
+    属性值 repeat 导致图像在水平垂直方向上都平铺，就像以往背景图像的通常做法一样。
+    repeat-x 和 repeat-y 分别导致图像只在水平或垂直方向上重复，no-repeat 则不允许图像在任何方向上平铺。
+    默认地，背景图像将从一个元素的左上角开始。
+
+背景定位
+background-position
+可以利用 background-position 改变背景图像在背景中的位置/
+
+为background-position 这个属性  提供值 可用关键字 百分数 长度值
+
+例子，使用方法
+body
+  {
+    background-image:url('/i/eg_bg_03.gif');
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+
+关键字
+关键字成对出现，无先后顺序（只要不超过两个，一个水平方向，一个垂直方向），
+如果只出现一个关键字，另一个默认为 center  中心
+top上部
+bottom下部
+center中心
+right右
+left左
+
+使用方法
+p
+  {
+    background-image:url('bgimg.gif');
+    background-repeat:no-repeat;
+    background-position:top;
+  }
+
+
+
+百分数值
+如果只提供一个百分数，这个只默认为水平值，垂直为50%
+background-position默认值为 0% 0%，等于关键字的 top left
+使用方法
+body
+  {
+    background-image:url('/i/eg_bg_03.gif');
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+  }
+
+
+长度值
+px
+
+背景关联，也就是背景图像固定
+
+background-attachment属性
+
+fixed 固定
+默认值为scroll滚动
+
+使用方法
+body
+  {
+  background-image:url(/i/eg_bg_02.gif);
+  background-repeat:no-repeat;
+  background-attachment:fixed
+  }
+
+  CSS 背景属性
+  属性	描述
+  background	简写属性，作用是将背景属性设置在一个声明中。
+  background-attachment	背景图像是否固定或者随着页面的其余部分滚动。
+  background-color	设置元素的背景颜色。
+  background-image	把图像设置为背景。
+  background-position	设置背景图像的起始位置。
+  background-repeat	设置背景图像是否及如何重复。
+
+
+
+
+  CSS文本
+
+
+intersect交集
+。复合选择器
+    交集选择器
+    共有的
+    由元素选择器和 class 或 id 选择器直连构成
+    选择二者同时满足的标记
+
+    并集选择器
+    由多个基本选择器使用逗号 , 连接
+    选择所有的标记\必须有逗号
+
+
+body{margin:""
+
+}
+
+cursor光标
+crosshair十字
+
+margin 外边距
+padding 内边距
+*   通配符wildcard 外卡 野牌  所有的元素
+初始化
+
+    派生选择器
+    后代选择器
+    由多个基本选择器使用空格   连接
+    选择含有嵌套关系的标记
+由>链接的基本选择器 为子选择器
+
+伪类选择器pseudo-class
+
+a：**{
+}
+状态顺序不可变
+link  普通时的状态
+visited   访问过的状态
+hover在上方 光标悬停的状态
+active   光标点击的状态
+
+
+
+
+
+属性选择器
+
+[attribute] 用于选取带有指定属性的元素
+属性attribute
+跟属性和值有关
+jQurey
+
+[attribute=value] 用于选取带有指定属性和值的元素
+value值
+
+
+[attribute~=value] 用于选取属性值中包含指定词汇的元素
+
+
+[attribute|=value] 用于选取带有以指定值开头的属性值的元素，该值必须是整个单词
+
+
+
+[attribute^=value] 匹配属性值以指定值开头的每个元素
+
+
+
+[attribute$=value] 匹配属性值以指定值/*结尾的每个元素*/
+
+
+
+[attribute*=value] 匹配属性值中包含指定值的/*-每个元素-*/
+
+
+
+伪类 pseudo-class选择器
+
+A pseudo-class is used to define a special state of an element.
+用来定义一个元素的特殊的状态
+锚点的 LoVe - HeAt
+:link未点击
+:visited已访问
+:hover悬停
+:active点击过
+
+
+All
+
+:active点击过
+:checked
+:disabled禁用
+:empty
+:enabled
+:first-child - Selects every elements that is the first child of its parent 当前元素所在父元素的第一个子元素所在的状态
+:first-of-type - Selects every elements that is the first type of its parent 当前元素所在父元素的第一个同类型元素的状态
+:focus  集中聚集  功能：获取焦点/
+:hover悬停
+:in-range
+:invalid
+:lang(language)语言
+:last-child  当前元素所在父元素的最后一个子元素所在的状态
+:last-of-type 当前元素所在父元素的最后一个同类型元素的状态
+:link 链接
+:not(selector)
+:nth-child(n)
+:nth-last-child(n)
+:nth-last-of-type(n)
+:nth-of-type(n)
+:only-of-type
+:only-child
+:optional
+:out-of-range
+:read-only
+:read-write
+:required
+:root
+:target
+:valid
+:visited
+
+
+伪元素 pseudo-element元素
+
+A CSS pseudo-element is used to style specified parts of an element.
+用来定义一个元素特殊部分的特殊状态
+::before在前面加入一个内容
+::after在后面加入一个内容
+::first-letter第一个字母
+::first-line第一行
+::selection被选中
+
+content属性
+moz一种浏览器
+
+..返回上一级
+
+前端开发工具
+网页三剑客90末
+dreamweaver   不建议使用
+会多生成冗余代码
+手写网页
+flash
+fireworks
+
+常用样式
+
+background  背景
+background-color
+background-image
+background-repeat背景重复
+background-attachment背景关联
+background-position背景定位
+
+
+color
+text-aline
+text-aline: center; 内容水平居中
+text-decoration
+text-transform
+text-indent
+vertial-aline
+line-height
+line-height: height; 内容垂直居中
+font-family
+font-style
+font-size
+font-weight
+list-style
+list-style-type
+list-style-position
+list-style-image
+
+border边框
+border-color
+border-style
+dotted点
+groove沟槽
+dashed虚线
+solid实线
+border-radius圆角
+border-width
+content内容
+
+
+margin外边距
+margin-auto自动
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+padding内边距
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+width
+min-width
+max-width
+height
+min-height
+max-height
+
+display
+visibility
+position
+z-index
+
+float 浮动
+clear
+overflow
+cursor
+
+
+box model 盒子模型
+
+box 无处不在
+
+box 有并列关系和嵌套关系
+
+div块级盒子  垂直外边距取最大
+span行类盒子左右内外边距有效，上下内外边距高度宽度无效
+水平外边距取和
+
+firebug
+
+ Float浮动
+ container容器
+ inherit继承
+ transparent透明
+标准流的概念
+    没有 布局样式 时，网页呈现的布局
+    布局样式：float clear position display visibility 等
+float 改变了什么
+    浮动的 box 脱离了标准流，原位置被其他 box 占据
+    浮动的 box 宽度自适应于内容
+    占据浮动 box 的内容在浮动 box 的 margin 之外
+塌缩 collapse 的解决
+清除浮动 clear
+Source code
+  <!-- index.html -->
+  <div>
+      <div id="d1">div1...</div>
+      <div id="d2">div2...</div>
+      <div id="d3">div3...</div>
+      <div class="clear"></div>
+  </div>
+  /* style.css */
+  .clear {
+      clear: both;
+  }
+
+  #d1,
+  #d2,
+  #d3 {
+      float: left;
+  }
+图文混排的实现
+
+
+
+
+
+Layout布局
+
+从外向内 & 从大到小
+box model 的观点
+居中的一种方法 margin: auto;
+
+
+产品 (狗)           PM
+设计                UI PS/AI
+前端                Front End
+后端/服务器端       Back End
+测试                Tester
+
+
+
+
+
+wrapper包裹
+nav导航
+    opacity透明度
+    content用派生选择器
+    list-style：none列表无点
+    text-decoration:none下划线去除
+    line-height垂直居中
+    display显示
+        inline变行级
+        block变块级
+        inline-block具有行类和块级元素的特点，对外行内，对内块级
+        none不显示
+        flex
+    text-aline
+    font-
+banner图片
+product产品
+
+
+foot
+  link
+  info
+
+position定位
+
+静态定位
+    标准流
+相对定位
+    没有脱离标准流
+    相对于自己原来的位置
+绝对定位
+    脱离了标准流
+    相对于距离它 最近的 已定位 的 祖先元素
+    已定位指 position 值不是 static
+固定定位
+    脱离了标准流
+    相对浏览器的最左上角
+偏移量
+    top
+    left
+    right
+    bottom
+z-index
+    对于已定位元素，值越大越靠近上边
+    对于以定为元素才成立。
+
+visibility可见性
+    hidden 不显示但保留位置
+display
+
+    inline 块级变行内
+    block 行内变块级
+    inline-block 对外行内，对内块级
+    none 不显示且不保留位置
+
+textarea文本输入域
+overflow溢出
+
+
+
+
+
+
+
+
+
+
+
