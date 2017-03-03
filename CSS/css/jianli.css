@@ -1,0 +1,46 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#container {
+    width: 1000px;
+    height: 1200px;
+    background: #ddd;
+margin: auto;
+}
+
+#left {
+background: white;
+width: 400px;
+    height: 1200px;
+}
+
+/*#crcle {*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*background: #ffe0fe;*/
+    /*-moz-border-radius: 80px;*/
+    /*border-radius: 80px;*/
+/**/
+}
+
+
+#right {
+background: black;
+    width: 600px;
+    height: 1200px;
+}
+
+
+#left，#right {
+    float: left;
+}
+
+#heading {
+
+}
+
+
