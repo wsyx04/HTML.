@@ -540,14 +540,14 @@ position定位
 
 静态定位
     标准流
-相对定位
+相对定位relative
     没有脱离标准流
     相对于自己原来的位置
-绝对定位
+绝对定位absolute
     脱离了标准流
     相对于距离它 最近的 已定位 的 祖先元素
     已定位指 position 值不是 static
-固定定位
+固定定位fixed
     脱离了标准流
     相对浏览器的最左上角
 偏移量
@@ -570,6 +570,26 @@ display
 
 textarea文本输入域
 overflow溢出
+
+yuan
+ #img {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: auto;
+            background: white;
+        }
+
+        #img img {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            border-radius: 50%;
+            height: 190px;
+            width: 190px;
+        }
 
 
 

@@ -1,0 +1,16 @@
+onclick  点击
+alert  弹出
+获取元素的方法
+1.document.getElementById();  文档 找到 元素 输出 id
+2.document.getElementByClassName();
+2.document.getElementByTagName();
+
+获取div p ul ol li dl dt dd文本值
+1.用innerHTML
+2.用innerText
+赋值
+2.用innerText=''
+1.用innerHTML=''
+var box=docment.getElementById('');
+console.log(box.innerHTML);
+获取表单的值
