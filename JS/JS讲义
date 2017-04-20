@@ -14,3 +14,18 @@ alert  弹出
 var box=docment.getElementById('');
 console.log(box.innerHTML);
 获取表单的值
+
+function 函数
+
+display:block  行内变块
+display:inline  块变行内
+
+输出的三种方式
+1.alert() 弹出
+2.console.log()
+3.prompt()提示况
+
+setInterval  定时器
+
+lis[i].index = i;
+console.log(this.index);

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--菜单切换页面练习-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 550px;
+            height: 400px;
+            background: blueviolet;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        #left {
+            width: 100px;
+            height: 300px;
+            margin: 10px auto;
+        }
+
+        #left li {
+            width: 95px;
+            height: 70px;
+            background: darkgoldenrod;
+            padding: 5px 0;
+            border: 1px solid #f5f5f5;
+            margin: 10px auto;
+        }
+
+        #right {
+            width: 400px;
+            height: 300px;
+        }
+
+        #right p {
+            width: 350px;
+            height: 250px;
+            background: white;
+            padding: 60px 0;
+            margin: 20px auto ;
+        }
+
+        #left, #right {
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="left">
+        <ul id="box1">
+            <li>
+                凉菜
+            </li>
+            <li>
+                热菜
+            </li>
+            <li>
+                甜品
+            </li>
+            <li>
+                饮品
+            </li>
+        </ul>
+    </div>
+    <div id="right">
+        <p>fafafafafafaf</p>
+        <p>"I want you to remember Clark,"
+            he says, "in all the years to come.
+            In all your private moments.
+            In all the years to come, my hand at your throat.
+            I want you to remember, the one man who beat you."</p>
+        <p>ife was like a box of chocolates, you never know what you’re gonna get.
+            生命就像一盒巧克力，结果往往出人意料 . 《阿甘正传》
+            Death is just a part of life, something we're all destined to do.
+            死亡是生命的一部分，是我们注定要做的一件事。《阿甘正传》</p>
+        <p>
+            哈哈哈哈，新闻不过是个蛋,
+            呵呵呵呵，白百何一指禅毁千万,
+            呦呦呦呦，人民日报要干王者荣耀.
+        </p>
+    </div>
+
+</div>
+<script>
+    var  b1=document.getElementById("box1").getElementsByTagName("li"),
+      b2=document.getElementById("right").getElementsByTagName("p");
+
+    for (var i=0;i<b1.length;i++) {
+        b1[i].index = i;
+        console.log(b1[i].index);
+        b1[i].onclick = function () {
+            for (var j = 0; j < b2.length; j++) {
+                b2[j].style.display = 'none';
+                b1[j].style.background = '';
+            }
+            b2[this.index].style.display = 'block';
+            b1[this.index].style.background = '#fff';
+        }
+    }
+
+</script>
+
+</body>
+</html>

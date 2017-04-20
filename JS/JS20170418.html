@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            margin: 0;
+            /*height: 0;*/
+            list-style: none;
+        }
+
+        #box {
+            width: 400px;
+            height: 450px;
+            background: blueviolet;
+            margin:40px auto;
+            overflow: hidden;
+        }
+
+        #box ul {
+            height: 50px;
+        }
+
+        #box li {
+            float: left;
+            padding: 0 10px;
+            color: darkblue;
+            border-right: 1px solid #f5f5f5;
+            text-align: center;
+            background: #40437A;
+        }
+        #con {
+            height: 200px;
+        }
+        #box1,#box3,#box2 {
+            width: 350px;
+            margin: auto;
+            padding: 5px;
+            background: white;
+        }
+        #box1 {
+            height: 380px;
+
+        }
+        #box2 {
+            height: 300px;
+        }
+        #box3 {
+            height: 320px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="box">
+    <ul id="xinwen">
+        <li>Tab1</li>
+        <li>Tab2</li>
+        <li>Tab3</li>
+    </ul>
+    <div id="con">
+        <p id="box1">
+            "I want you to remember Clark,"
+            he says, "in all the years to come.
+            In all your private moments.
+            In all the years to come, my hand at your throat.
+            I want you to remember, the one man who beat you."
+        </p>
+        <p id="box2">
+            我希望你记住，克拉克，在今后的岁月里，在你最私人的时刻。
+            我希望你记住锁在你喉头的我的手。我希望你记住打败你的男人。
+        </p>
+        <p id="box3">
+            Life was like a box of chocolates, you never know what you’re gonna get.
+            生命就像一盒巧克力，结果往往出人意料 . 《阿甘正传》
+            Death is just a part of life, something we're all destined to do.
+            死亡是生命的一部分，是我们注定要做的一件事。《阿甘正传》
+        </p>
+    </div>
+    <script>
+        var sbbb = document.getElementById('xinwen').getElementsByTagName('li'),
+            sblbb = document.getElementById('con').getElementsByTagName('p');
+
+        for (var i = 0; i < sbbb.length; i++) {
+            sbbb[i].index = i;
+            console.log(sbbb[i].index);
+            sbbb[i].onclick = function () {
+                for (var j = 0; j < sblbb.length; j++) {
+                    sblbb[j].style.display = 'none';
+                    sbbb[j].style.background = '';
+
+                }
+                sblbb[this.index].style.display = 'block';
+                sbbb[this.index].style.background = '#fff';
+            }
+        }
+
+
+    </script>
+</div>
+</body>
+</html>

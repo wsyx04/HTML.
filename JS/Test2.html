@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--图片切换练习-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 700px;
+            height: 320px;
+            margin: auto;
+            border: 10px solid blue;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #left, #right {
+            width: 40px;
+            height: 60px;
+            background: #ccc;
+            opacity: 0.5;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 36px;
+            position: absolute;
+            top: 145px;
+        }
+
+        #left {
+            position: absolute;
+            left: 10px;
+
+        }
+
+        #right {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="box">
+
+    <img src="../image/1.jpg"/>
+    <img src="../image/2.jpg"/>
+    <img src="../image/3.jpg"/>
+    <img src="../image/4.jpg"/>
+    <img src="../image/5.jpg"/>
+    <img src="../image/6.jpg"/>
+    <img src="../image/7.jpg"/>
+    <img src="../image/8.jpg"/>
+    <img src="../image/9.jpg"/>
+    <img src="../image/10.jpg"/>
+    <span id="left"> < </span>
+    <span id="right"> > </span>
+</div>
+<script>
+
+</script>
+</body>
+</html>
