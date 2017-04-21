@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--焦点滚动图片-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 700px;
+            height: 320px;
+            margin: 40px auto;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+        #box ul li {
+            float: left;
+        }
+        #num {
+            width: 220px;
+            height: 20px;
+            /*background: #cccccc;*/
+            float: left;
+            position: absolute;
+            right: 250px;
+            bottom: 20px;
+        }
+        #num li {
+            width: 18px;
+            height: 18px;
+            background: black;
+            opacity: 0.5;
+            float: left;
+            /*color: cadetblue;*/
+            /*line-height: 18px;*/
+            border: 1px solid black;
+            margin-left: 2px;
+            /*text-align: center;*/
+            border-radius: 10px;
+        }
+        #left {
+            position: absolute;
+            left: 10px;
+            top: 145px;
+            width: 50px;
+            height: 60px;
+            background: #ccc;
+            opacity: 0.5;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 36px;
+        }
+
+        #right {
+            position: absolute;
+            right: 10px;
+            top: 145px;
+            width: 50px;
+            height: 60px;
+            background: #ccc;
+            opacity: 0.5;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="img">
+       <li><img src="../image/1.jpg" /></li>
+       <li><img src="../image/2.jpg" /></li>
+       <li><img src="../image/3.jpg" /></li>
+       <li><img src="../image/4.jpg" /></li>
+       <li><img src="../image/5.jpg" /></li>
+       <li><img src="../image/6.jpg" /></li>
+       <li><img src="../image/7.jpg" /></li>
+       <li><img src="../image/8.jpg" /></li>
+       <li><img src="../image/9.jpg" /></li>
+       <li><img src="../image/10.jpg" /></li>
+    </ul>
+    <ol id="num">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+<span id="left">  <  </span>
+<span id="right">  >  </span>
+</div>
+<script>
+    var img = document.getElementById("img").getElementsByTagName("li"),
+        num = document.getElementById("num").getElementsByTagName("li");
+
+
+    for (var i = 0; i < num.length; i++) {
+        num[i].index = i;
+        num[i].onmouseover = function () {
+            for (var j = 0; j < img.length; j++) {
+                img[j].style.display = "none";
+                num[j].style.background = "none"
+            }
+            img[this.index].style.display = "block";
+            num[this.index].style.background = "red"
+        }
+    }
+</script>
+
+</body>
+</html>
