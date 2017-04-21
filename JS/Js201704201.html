@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--图片无缝滚动-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            background: black;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #con {
+            width: 600px;
+            height: 100px;
+        }
+
+        li {
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="con">
+        <li style="background-color: chartreuse"></li>
+        <li style="background-color: mediumslateblue"></li>
+        <li style="background-color: mediumspringgreen"></li>
+    </ul>
+</div>
+<script>
+    var dd = document.getElementById('con');
+    function auto() {
+        var ss = parseInt(dd.style.marginLeft);
+        if (!ss) {
+            ss = 0;
+        }
+        if (ss > -400) {
+            dd.style.marginLeft = ss - 1 + 'px'
+        } else {
+            dd.style.marginLeft = 0;
+        }
+    }
+    setInterval(auto, 30);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+
+        #box {
+            width: 700px;
+            height: 320px;
+            background: black;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #con {
+            width: 7000px;
+            height: 320px;
+        }
+
+        li {
+            width: 700px;
+            height: 320px;
+            float: left;
+        }
+
+        #bt {
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="box">
+    <ul id="con">
+        <li style="background-color: chartreuse"><img src="../image/1.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/2.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/3.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/4.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/5.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/6.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/7.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/8.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/9.jpg" height="320" width="700"/></li>
+        <li style="background-color: chartreuse"><img src="../image/10.jpg" height="320" width="700"/></li>
+
+    </ul>
+</div>
+<div id="bt">
+    <button id="btn1">开始</button>
+    <button id="btn2">暂停</button>
+
+</div>
+<script>
+    var dd = document.getElementById('con'),
+        btn1 = document.getElementById("btn1"),
+        btn2 = document.getElementById("btn2");
+    function auto() {
+        var ss = parseInt(dd.style.marginLeft);
+        if (!ss) {
+            ss = 0;
+        }
+        if (ss > -6300) {
+            dd.style.marginLeft = ss - 1 + 'px'
+        } else {
+            dd.style.marginLeft = 0;
+        }
+    }
+    setInterval(auto, 50);
+    btn1.onclick = function () {
+        btn1.disabled = 'disabled';
+        sl = setInterval(aa, 100);
+    }
+
+    btn2.onclick = function () {
+        clearInterval(sl);
+        btn1.disabled = '';
+    }
+</script>
+
+</body>
+</html>

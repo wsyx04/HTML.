@@ -29,3 +29,6 @@ setInterval  定时器
 
 lis[i].index = i;
 console.log(this.index);
+
+
+parseInt  强制转换成整数
