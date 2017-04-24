@@ -10,6 +10,7 @@
             padding: 0;
             list-style: none;
         }
+
         #box {
             width: 700px;
             height: 320px;
@@ -18,9 +19,11 @@
             position: relative;
             overflow: hidden;
         }
+
         #box ul li {
             float: left;
         }
+
         #num {
             width: 220px;
             height: 20px;
@@ -30,6 +33,7 @@
             right: 250px;
             bottom: 20px;
         }
+
         #num li {
             width: 18px;
             height: 18px;
@@ -43,6 +47,7 @@
             /*text-align: center;*/
             border-radius: 10px;
         }
+
         #left {
             position: absolute;
             left: 10px;
@@ -75,16 +80,16 @@
 <body>
 <div id="box">
     <ul id="img">
-       <li><img src="../image/1.jpg" /></li>
-       <li><img src="../image/2.jpg" /></li>
-       <li><img src="../image/3.jpg" /></li>
-       <li><img src="../image/4.jpg" /></li>
-       <li><img src="../image/5.jpg" /></li>
-       <li><img src="../image/6.jpg" /></li>
-       <li><img src="../image/7.jpg" /></li>
-       <li><img src="../image/8.jpg" /></li>
-       <li><img src="../image/9.jpg" /></li>
-       <li><img src="../image/10.jpg" /></li>
+        <li><img src="../image/1.jpg"/></li>
+        <li><img src="../image/2.jpg"/></li>
+        <li><img src="../image/3.jpg"/></li>
+        <li><img src="../image/4.jpg"/></li>
+        <li><img src="../image/5.jpg"/></li>
+        <li><img src="../image/6.jpg"/></li>
+        <li><img src="../image/7.jpg"/></li>
+        <li><img src="../image/8.jpg"/></li>
+        <li><img src="../image/9.jpg"/></li>
+        <li><img src="../image/10.jpg"/></li>
     </ul>
     <ol id="num">
         <li></li>
@@ -98,23 +103,46 @@
         <li></li>
         <li></li>
     </ol>
-<span id="left">  <  </span>
-<span id="right">  >  </span>
+    <span id="left">  <  </span>
+    <span id="right">  >  </span>
 </div>
 <script>
     var img = document.getElementById("img").getElementsByTagName("li"),
         num = document.getElementById("num").getElementsByTagName("li");
+    function auto() {
+        //自动播
+        var k = 0;//初始值
+        for (var i = 0; i < num.length; i++) {
+            img[i].style.display = 'none';
+            num[i].style.background = 'none';
+        }
+        img[k].style.display = 'black';
+        num[k].style.background = 'red';
+        k++;
 
-
+        if (k > num.length - 1) {
+            k = 0;
+        }
+    }
+    sl = setInterval(auto, 1000);
+    //划过对应的照片
     for (var i = 0; i < num.length; i++) {
         num[i].index = i;
         num[i].onmouseover = function () {
+            clearInterval(sl);
+            //鼠标划过数字的时候
+            //让所有的图片隐藏 让数字的背景清空
             for (var j = 0; j < img.length; j++) {
                 img[j].style.display = "none";
                 num[j].style.background = "none"
             }
             img[this.index].style.display = "block";
             num[this.index].style.background = "red"
+        }
+        num[i].onmouseout = function () {
+            k = this.index;
+            sl = setInterval(auto, 1000);
+
         }
     }
 </script>
