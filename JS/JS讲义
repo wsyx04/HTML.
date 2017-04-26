@@ -32,3 +32,36 @@ console.log(this.index);
 
 
 parseInt  强制转换成整数
+
+
+-webkit-animation: 名字 时间 速度曲线；
+匀速
+又快到慢 liner
+又慢开始 ease
+又慢结束 ease-out
+又慢开始又慢结束  ease-in-out
+
+
+值	描述
+animation-name	规定需要绑定到选择器的 keyframe 名称。。
+animation-duration	规定完成动画所花费的时间，以秒或毫秒计。
+animation-timing-function	规定动画的速度曲线。
+animation-delay	规定在动画开始之前的延迟。
+animation-iteration-count	规定动画应该播放的次数。
+animation-direction	规定是否应该轮流反向播放动画。
+
+n次数值 infinite无限 播放次数
+normal alternate 动画的方向倒序
+
+
+
+-webkit-transform: 旋转 rotate3的（x y z）
+                   倾斜 skew
+                   缩放
+                   平移
+
+
+
+       display:none  不占位的
+       选择器
+       +  谁知后的元素

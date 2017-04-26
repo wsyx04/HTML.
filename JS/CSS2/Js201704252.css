@@ -1,0 +1,72 @@
+#box{
+    width: 3500px;
+    height: 320px;
+    position: absolute;
+    -webkit-animation:mycss 10s linear 3s infinite;
+    /* 速度曲线:匀速         linear
+             由慢到快再到慢 ease;
+             由慢开始     ease-in
+             由慢结束    ease-out
+             由慢开始由慢结束 ease-in-out
+    播放次数:n infinite;
+    动画的方向:normal alternate倒序; */
+}
+@-webkit-keyframes mycss{
+    0%{
+        left:0;
+    }
+    30%{
+        left:-700px;
+    }
+    60%{
+        left:-1400px;
+    }
+    75%{
+        left:-2100px;
+    }
+    100%{
+        left:-2800px;
+    }
+}
+#box1{
+    width: 100px;
+    height: 50px;
+    background: #f5f5f5;
+    margin: 20px auto;
+}
+#box1 div{
+    width: 20px;
+    height:20px;
+    border-radius: 10px;
+    background: red;
+    display: inline-block;
+}
+#box1 #loading1{
+    -webkit-animation:mycss1 1s linear infinite alternate;
+}
+#box1 #loading2{
+    background:blue;
+    -webkit-animation:mycss2 1s linear infinite alternate;
+}
+@-webkit-keyframes mycss1{
+    /* 0%{
+        -webkit-transform:scale(0.8);
+    }
+    100%{
+        -webkit-transform:scale(1.2);
+    } */
+    from{
+        -webkit-transform:scale(0.8);
+    }
+    to{
+        -webkit-transform:scale(1.2);
+    }
+}
+@-webkit-keyframes mycss2{
+    0%{
+        -webkit-transform:scale(1.2);
+    }
+    100%{
+        -webkit-transform:scale(0.8);
+    }
+}

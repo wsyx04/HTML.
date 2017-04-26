@@ -1,0 +1,38 @@
+* {
+    margin: 20px auto;
+}
+.box {
+    width: 50px;
+    height: 20px;
+background: yellow;
+}
+.box1 {
+    width: 50px;
+    height: 20px;
+    background: blue;
+}
+.box2 {
+    width: 50px;
+    height: 20px;
+    background: gold;
+}
+.box3 {
+    width: 50px;
+    height: 20px;
+    background: palevioletred;
+}
+.box4 {
+    width: 50px;
+    height: 20px;
+    background: aqua;
+}
+.box5 {
+    width: 50px;
+    height: 20px;
+    background: rebeccapurple;
+}
+.box6 {
+    width: 50px;
+    height: 20px;
+    background: lawngreen;
+}
