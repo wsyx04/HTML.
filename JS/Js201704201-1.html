@@ -30,9 +30,7 @@
             float: left;
         }
 
-        #bt {
 
-        }
     </style>
 
 </head>
@@ -52,15 +50,10 @@
 
     </ul>
 </div>
-<div id="bt">
-    <button id="btn1">开始</button>
-    <button id="btn2">暂停</button>
 
-</div>
 <script>
-    var dd = document.getElementById('con'),
-        btn1 = document.getElementById("btn1"),
-        btn2 = document.getElementById("btn2");
+    var dd = document.getElementById('con');
+
     function auto() {
         var ss = parseInt(dd.style.marginLeft);
         if (!ss) {

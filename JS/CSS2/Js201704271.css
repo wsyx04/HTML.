@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    height: 0;
+    list-style: none;
+}
+#box {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    -webkit-animation: mycss 2s linear 1s infinite alternate;
+}
+@-webkit-keyframes mycss {
+    0%{
+        -webkit-transform: translateX(0);
+    }
+    25%{
+        -webkit-transform: translateX(400px);
+    }
+    50%{
+        -webkit-transform: translate(400px,300px);
+    }
+    75%{
+        -webkit-transform: translateY(300px);
+    }
+
+    100%{
+        -webkit-transform: translateX(0);
+    }
+
+
+}

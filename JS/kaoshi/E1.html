@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            margin: auto;
+            overflow: hidden;
+            width: 820px;
+            height: 461px;
+
+        }
+
+        #con {
+            width: 4100px;
+            height: 461px;
+
+        }
+
+        #con li {
+            width: 820px;
+            height: 461px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="con">
+        <li><img src="../img1/1.jpg"/></li>
+        <li><img src="../img1/2.jpg"/></li>
+        <li><img src="../img1/3.jpg"/></li>
+        <li><img src="../img1/4.jpg"/></li>
+        <li><img src="../img1/5.jpg"/></li>
+
+    </ul>
+</div>
+<script>
+    var dd = document.getElementById('con');
+
+    function auto() {
+        var ss = parseInt(dd.style.marginLeft);
+        if (!ss) {
+            ss = 0;
+        }
+        if (ss > -3280) {
+            dd.style.marginLeft = ss - 5 + 'px'
+        } else {
+            dd.style.marginLeft = 0;
+        }
+    }
+    setInterval(auto, 20);
+</script>
+</body>
+</html>

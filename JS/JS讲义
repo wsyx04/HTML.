@@ -65,3 +65,8 @@ normal alternate 动画的方向倒序
        display:none  不占位的
        选择器
        +  谁知后的元素
+
+
+       animation transition
+      1. animation 不需要时间触发
+       transition 需要时间触发

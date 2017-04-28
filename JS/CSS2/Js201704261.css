@@ -21,7 +21,7 @@
     height: 27px;
     border-radius: 15px;
     display: block;
-    background:url("../image/tutu2.png");
+    background: url("../image/tutu2.png");
     -webkit-transition: all 1s;
 }
 
@@ -29,7 +29,59 @@
     background-position: -51px 0;
 }
 
-#radioBox1 {
+#checkBox1 {
+    width: 50px;
+    height: 30px;
+    position: relative;
     margin: 0 auto;
+}
+
+#checkBox1 input {
+    position: absolute;
+    opacity: 0;
+}
+
+#checkBox1 label {
+    width: 50px;
+    height: 30px;
+    display: block;
+    background: url("../image/tutu4.png");
+    background-size: 100%;
+    -webkit-transition: all 3s;
+
+}
+
+#checkBox1 input:checked + label {
+    background: url("../image/tutu3.png");
+    background-size: 100%;
+}
+
+#moreChecked {
+    width: 200px;
+    height: 25px;
+    margin: 40px auto;
+}
+
+#moreChecked li {
+    float: left;
+    position: relative;
+    line-height: 25px;
+}
+
+#moreChecked li input {
+    position: absolute;
+    opacity: 0;
+}
+
+#moreChecked li label {
+    width: 25px;
+    height: 25px;
+    display: block;
+    padding-left: 30px;
+    background: url("../image/tutu7.png") no-repeat 0 -75px;
+}
+
+#moreChecked li input:checked + label {
+    background-position: 0 -100px;
 
 }
